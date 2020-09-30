@@ -48,27 +48,22 @@
                                         <li><a href="#">CSS</a></li>
                                     </ul>
                                 </li>
-                            </ul>
-                            <form class="navbar-form navbar-left">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Search">
-                                </div>
-                                <button type="submit" class="btn btn-default">Submit</button>
-                            </form>
-                            <ul class="nav navbar-nav navbar-right">
-                                <li><a href="#">Link</a></li>
                                 <li class="dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                                        aria-haspopup="true" aria-expanded="false">Dropdown <span
-                                            class="caret"></span></a>
+                                        aria-haspopup="true" aria-expanded="false">Software <span class="caret"></span>
+                                    </a>
                                     <ul class="dropdown-menu">
-                                        <li><a href="#">Action</a></li>
-                                        <li><a href="#">Another action</a></li>
-                                        <li><a href="#">Something else here</a></li>
+                                        <li><a href="#">PHP</a></li>
+                                        <li><a href="#">ASP</a></li>
+                                        <li><a href="#">AJAX</a></li>
                                         <li role="separator" class="divider"></li>
-                                        <li><a href="#">Separated link</a></li>
+                                        <li><a href="#">jQuery</a></li>
+                                        <li role="separator" class="divider"></li>
+                                        <li><a href="#">MySQL</a></li>
+                                        <li><a href="#">CSS</a></li>
                                     </ul>
                                 </li>
+                                <li><a href="#">Contact Us</a></li>
                             </ul>
                         </div><!-- /.navbar-collapse -->
                     </div><!-- /.container-fluid -->
