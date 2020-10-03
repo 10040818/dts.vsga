@@ -1,12 +1,12 @@
 function hasClass(el, className) {
     if (el.classList)
-        return el.classList.contains(className)
+        return el.classList.contains(className);
     return !!el.className.match(new RegExp('(\\s|^)' + className + '(\\s|$)'));
 }
 
 function addClass(el, className) {
     if (el.classList)
-        return el.classList.addClass(className);
+        return el.classList.add(className);
     else if (!hasClass(el, className))
         el.className += ' ' + className;
 }
@@ -59,7 +59,7 @@ var products = [{
         name: 'French Fries',
         price: 18000,
         active: false,
-    }
+    },
 ];
 
 var total = 0;
