@@ -91,7 +91,7 @@ function renderList(container, products) {
         var $productPrice = document.createElement('span');
 
         $productPrice.innerHTML = currency(product.price);
-        $products.innerHTML = product.name;
+        $product.innerHTML = product.name;
         $product.appendChild($productPrice);
 
         $orderList.appendChild($product);
@@ -118,3 +118,32 @@ function renderList(container, products) {
     });
     container.appendChild($orderList);
 }
+
+// Render Total
+function renderTotalContainer(container, total) {
+    var $totalContainer = document.createElement('div');
+    addClass($totalContainer, 'total');
+
+    $totalContainer.innerHTML = 'Total: ';
+
+    var $total = document.createElement('span');
+    $total.innerHTML = currency(total);
+    $totalContainer.appendChild($total);
+
+    container.appendChild($totalContainer);
+}
+
+// Render title, list, dan totalContainer
+renderTitle($app);
+renderList($app, products);
+renderTotalContainer($app, total);
+
+// querySelectorAll untuk mendapatkan semua DOM Node yang sesuai dengan selector yang diberikan.
+// kemudian kita bisa enggunakan loop (forEach) untuk mendapat setiap DOM nodenya
+var $products = document.querySelectorAll('li');
+$products.forEach(function ($product, index) {
+    // kita pilih 2 order teratas dengan men-trigger event click
+    if (index < 2) {
+        $product.dispatchEvent(new Event('click'));
+    }
+});
