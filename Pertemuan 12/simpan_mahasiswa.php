@@ -2,16 +2,13 @@
 
 include 'koneksi.php';
 
-$nama = $_POST['nama_merek'];
-$warna = $_POST['warna'];
-$jumlah = $_POST['jumlah'];
+$nim = $_POST['nim'];
+$nama = $_POST['nama'];
+$jurusan = $_POST['jurusan'];
+$jenis_kelamin = $_POST['jenis_kelamin'];
+$alamat = $_POST['alamat'];
 
-// $sql = $db->query("INSERT INTO barang VALUES ('', '$nama', '$warna', '$jumlah')");
+$query = "INSERT INTO mahasiswa SET nim='$nim', nama='$nama', jurusan='$jurusan', alamat='$alamat'";
 
-$sql = "INSERT INTO barang VALUES ('', '$nama', '$warna', '$jumlah')";
-
-if ($db->query($sql) === TRUE) {
-    header('location: index.php');
-} else {
-    echo 'Data gagal ditambahkan!';
-}
+mysqli_query($koneksi, $query);
+header("Location:index.php");

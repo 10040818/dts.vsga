@@ -24,14 +24,25 @@
                         <input type="text" class="form-control" id="nm" name="nama" placeholder="Nama Anda">
                     </div>
                     <div class="form-group">
-                        <label>Jenis Kelamin</label>
-                        <input type="radio" class="form-control" name="jenis_kelamin" value="L"> Laki-laki
-                        <input type="radio" class="form-control" name="jenis_kelamin" value="P"> Perempuan
+                        <label class="radio">Jenis Kelamin</label>
+                        <label for="lk" class="radio-inline">
+                            <input type="radio" id="lk" name="jenis_kelamin" value="L"> Laki-laki
+                        </label>
+                        <label for="pr" class="radio-inline">
+                            <input type="radio" id="pr" name="jenis_kelamin" value="P"> Perempuan
+                        </label>
                     </div>
-                    
                     <div class="form-group">
-                        <label for="jml">Jumlah</label>
-                        <input type="number" class="form-control" id="jml" name="jumlah" placeholder="Jumlah Barang">
+                        <label for="jrs">Jurusan</label>
+                        <select class="form-control" name="jurusan" id="jrs">
+                            <option value="Teknik Informatika">Teknik Informatika</option>
+                            <option value="Teknik Mesin">Teknik Mesin</option>
+                            <option value="Teknik Kimia">Teknik Kimia</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="alamat">Alamat</label>
+                        <textarea class="form-control" name="alamat" id="alamat" rows="5"></textarea>
                     </div>
                     <button type="submit" class="btn btn-sm btn-primary">Simpan</button>
                     <a href="index.php" class="btn btn-sm btn-default">Kembali</a>

@@ -1,6 +1,6 @@
 <?php
 include 'koneksi.php';
-$data = $db->query("SELECT * FROM mahasiswa");
+$data = $koneksi->query("SELECT * FROM mahasiswa");
 ?>
 
 <!DOCTYPE html>
@@ -25,8 +25,9 @@ $data = $db->query("SELECT * FROM mahasiswa");
                             <th class="text-center">NO</th>
                             <th>NIM</th>
                             <th>NAMA</th>
-                            <th class="text-right">GENDER</th>
+                            <th>GENDER</th>
                             <th>JURUSAN</th>
+                            <th>AKSI</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -39,6 +40,7 @@ $data = $db->query("SELECT * FROM mahasiswa");
                                 <td><?= $mhs['nama']; ?></td>
                                 <td><?= $jenis_kelamin; ?></td>
                                 <td><?= $mhs['jurusan']; ?></td>
+                                <td><a class="btn btn-sm btn-warning" href="edit_mahasiswa.php?id=<?= $mhs['id_mhs']; ?>">Edit</a> <a class="btn btn-sm btn-danger" href="hapus_mahasiswa.php?id=<?= $mhs['id_mhs']; ?>"> Hapus</a></td>
                             </tr>
                         <?php } ?>
                     </tbody>
