@@ -11,7 +11,7 @@ $peserta = $db->query("SELECT peserta.* FROM peserta");
    <!-- link untuk loading bootstrap.css -->
    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
    <title>Pendaftaran DTS</title>
-</head>
+</head> 
 <?php
 header("Content-type: application/vnd-ms-excel");
 header("Content-Disposition: attachment; filename=peserta.xls");
